@@ -26,15 +26,8 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages:
-            any::renv
-            any::devtools
             any::tidyverse
-            any::httr
-            any::rlang
-            any::secret
-            any::stringr
-            any::anytime
-            any::tidyverse 
+            any::secret 
             any::DT 
             any::shiny
             any::rsconnect

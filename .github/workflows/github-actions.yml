@@ -26,7 +26,7 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages:
-            any::curl
+            curl@6.0.0
             any::renv
             any::devtools
             any::tidyverse
@@ -39,7 +39,6 @@ jobs:
             any::DT 
             any::shiny
             any::rsconnect
-            any::curl
               
       - name: Execute R Script
         env:

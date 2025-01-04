@@ -94,7 +94,7 @@ ui <- fluidPage(
       "
     ))
   ),
-  titlePanel("Car Data Viewer"),
+  titlePanel("Winter Augsburg Dome Soccer League"),
   sidebarLayout(
     sidebarPanel(
       selectInput("season", "Season:",

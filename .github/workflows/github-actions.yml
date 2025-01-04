@@ -39,6 +39,7 @@ jobs:
             any::DT 
             any::shiny
             any::rsconnect
+            any::curl
               
       - name: Execute R Script
         env:

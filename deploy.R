@@ -20,7 +20,7 @@ deployApp(
     'scores.csv', 
     
     # scripts and R files 
-    "app.R", 
+    "app.R"
     ), 
   appName = 'augsburg_rec', 
   forceUpdate = T

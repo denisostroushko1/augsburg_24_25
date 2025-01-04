@@ -51,6 +51,3 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
-          
-      - name: Send greeting  # <-- Corrected indentation
-        run: echo "Hello ${{ inputs.name }}"

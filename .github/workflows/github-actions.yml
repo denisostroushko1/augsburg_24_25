@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest 
     
     permissions:
-        contents: write
+      contents: write
         
     steps:
       - name: Check out repository
@@ -25,34 +25,32 @@ jobs:
       - name: Install packages
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-            packages:
-              any::curl
-              any::renv
-              any::devtools
-              any::tidyverse
-              any::httr
-              any::rlang
-              any::secret
-              any::stringr
-              any::anytime
-              any::tidyverse 
-              any::DT 
-              any::shiny
+          packages:
+            any::curl
+            any::renv
+            any::devtools
+            any::tidyverse
+            any::httr
+            any::rlang
+            any::secret
+            any::stringr
+            any::anytime
+            any::tidyverse 
+            any::DT 
+            any::shiny
               
       - name: Execute R Script
         env:
-            shiny_acc: ${{ secrets.SHINY_ACC_NAME}}
-            shiny_token: ${{ secrets.SHINY_TOKEN}}
-            shiny_secret: ${{ secrets.SHINY_SECRET }}
-            
+          shiny_acc: ${{ secrets.SHINY_ACC_NAME}}
+          shiny_token: ${{ secrets.SHINY_TOKEN}}
+          shiny_secret: ${{ secrets.SHINY_SECRET }}
         run: |
-            Rscript deploy.R
+          Rscript deploy.R
           
       - name: Setup git config
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
           
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+      - name: Send greeting  # <-- Corrected indentation
+        run: echo "Hello ${{ inputs.name }}"

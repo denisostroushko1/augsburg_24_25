@@ -38,6 +38,7 @@ jobs:
             any::tidyverse 
             any::DT 
             any::shiny
+            any::rsconnect
               
       - name: Execute R Script
         env:

@@ -1,3 +1,9 @@
+library(shiny)
+library(DT)
+library(tidyverse)
+library(rsconnect)
+
+##############
 
   if(file.exists('keys.R') == F){
     print("Connecting to account using git secrets")

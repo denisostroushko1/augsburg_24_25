@@ -40,9 +40,9 @@ jobs:
               
       - name: Execute R Script
         env:
-            shiny_acc: ${{ secrets.ACCESS_KEY }}
-            shiny_token: ${{ secrets.SECRET_KEY }}
-            shiny_secret: ${{ secrets.AWS_REGION }}
+            shiny_acc: ${{ secrets.SHINY_ACC_NAME}}
+            shiny_token: ${{ secrets.SHINY_TOKEN}}
+            shiny_secret: ${{ secrets.SHINY_SECRET }}
             
         run: |
             Rscript deploy.R

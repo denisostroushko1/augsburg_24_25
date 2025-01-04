@@ -1,4 +1,4 @@
-library(curl)
+
 library(shiny)
 library(DT)
 library(tidyverse)

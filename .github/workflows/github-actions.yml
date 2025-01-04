@@ -26,7 +26,6 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages:
-            curl@6.0.0
             any::renv
             any::devtools
             any::tidyverse

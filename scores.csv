@@ -1,0 +1,26 @@
+date, time, home, away, scorehome, scoreaway, season, session 
+2024-12-2,6:00,Brits,Dunesday, 1, 8,2024/2025,1
+2024-12-2,6:55,Clann,Ajax, 5, 7,2024/2025,1
+2024-12-2,7:50,Grumpys,Du Nord, 5, 5,2024/2025,1 
+2024-12-2,8:45,Vandals,Nighthawks, 4, 3,2024/2025,1 
+2024-12-2,9:40,Swamp Dragons,Tsunami, 1, 7,2024/2025,1 
+2024-12-9,6:00,Grumpys,Swamp Dragons, 7, 3,2024/2025,1 
+2024-12-9,6:55,Vandals,Dunesday, 3, 8,2024/2025,1
+2024-12-9,7:50,Brits,Du Nord, 4,4,2024/2025,1
+2024-12-9,8:45,Clann,Tsumani, 6,7,2024/2025,1
+2024-12-9,9:40,Nighthawks,Ajax, 3, 3,2024/2025,1 
+2024-12-16,6:00,Dunesday,Nighthawks, 0, 0,2024/2025,1  
+2024-12-16,6:55,Vandals,Swamp Dragons, 1,2,2024/2025,1
+2024-12-16,7:50,Ajax,Brits, 5,2,2024/2025,1
+2024-12-16,8:45,Tsumani,Grumpys, 1, 5,2024/2025,1 
+2024-12-16,9:40,Du Nord,Clann, 5,2,2024/2025,1
+2024-12-23,6:00,Dunesday,Clann, 7,7,2024/2025,1
+2024-12-23,6:55,Du Nord,Swamp Dragons, 3,7,2024/2025,1
+2024-12-23,7:50,Ajax,Grumpys, 10, 1,2024/2025,1
+2024-12-23,8:45,Nighthawks,Brits, 3, 7,2024/2025,1 
+2024-12-23,9:40,Vandals,Tsumani, 6,2,2024/2025,1
+2024-12-30,6:00,Vandals,Ajax,11,8,2024/2025,1
+2024-12-30,6:55,Nighthawks,Tsunami,7,4,2024/2025,1
+2024-12-30,7:50,Clann,Grumpys,5,12,2024/2025,1
+2024-12-30,8:45,Dunesday,Du Nord,2,5,2024/2025,1
+2024-12-30,9:40,Brits,Swamp Dragons,5,0,2024/2025,1

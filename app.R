@@ -126,17 +126,34 @@ server <- function(input, output) {
     datatable(
       produce_table(filtered_data(), G = 'G1'),
        options = list(dom = 't',
-                      columnDefs = list(list(className = 'dt-center', targets = 2:8))
-                      )
+                      columnDefs = 
+                        list(
+                          list(className = 'dt-center', targets = 2:8), 
+                          list(className = 'dt-bold', targets = 4)
+                             )
+                        ) ) %>%
+    formatStyle(
+      'Total Points', # Column name
+      fontWeight = 'bold',
+      fontSize = '18px'
     )
+      
   })
 
   output$table2 <- renderDT({
     datatable(
       produce_table(filtered_data(), G = 'G2'),
        options = list(dom = 't',
-                      columnDefs = list(list(className = 'dt-center', targets = 2:8))
-                      )
+                      columnDefs = 
+                        list(
+                          list(className = 'dt-center', targets = 2:8), 
+                          list(className = 'dt-bold', targets = 4)
+                             )
+                        ) ) %>%
+    formatStyle(
+      'Total Points', # Column name
+      fontWeight = 'bold',
+      fontSize = '18px'
     )
   })
 }

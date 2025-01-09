@@ -16,6 +16,7 @@ produce_table <- function(data, G){
   left_join(
     x = 
       data %>% 
+        filter(part_session == "Regular")  %>% 
         group_by(home) %>% 
         summarise(games_home = n(), 
                   wins_h = sum(ifelse(scorehome > scoreaway, 1, 0)),
@@ -33,6 +34,7 @@ produce_table <- function(data, G){
     , 
     y = 
       data %>% 
+        filter(part_session == "Regular") %>% 
         group_by(away) %>% 
         summarise(games_away = n(), 
                   wins_a = sum(ifelse(scorehome < scoreaway, 1, 0)),
@@ -83,6 +85,8 @@ produce_table <- function(data, G){
     }
 }
 
+##        produce_table(data_as_is, "G1")
+
 ###########################################################################
 # Define UI
 ui <- fluidPage(
@@ -107,11 +111,21 @@ ui <- fluidPage(
                   )
     ),
     mainPanel(
-      h2(strong("Group 1")),
-      DTOutput("table1"),
-      br(),
-      h2(strong("Group 2")),
-      DTOutput("table2")
+      tabsetPanel(
+        tabPanel(title = "Group Stage",
+                  h2(strong("Group 1")),
+                  DTOutput("table1"),
+                  br(),
+                  h2(strong("Group 2")),
+                  DTOutput("table2")
+                 ),
+        tabPanel(title = "Play-Off", 
+                 h2(strong("Semifinal")), 
+                 
+                 h2(strong("Final"))
+                 )
+      )
+
     )
   )
 )

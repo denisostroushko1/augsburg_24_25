@@ -13,7 +13,7 @@ group1 <- c('Vandals', 'Ajax', 'Dunesday', 'Nighthawks', 'Brits')
 group2 <- c('Clann', 'Grumpys', 'Swamp Dragons', 'Tsunami', 'Du Nord')
 
 produce_table <- function(data, G){
-  left_join(
+  full_join(
     x = 
       data %>% 
         filter(part_session == "Regular")  %>% 

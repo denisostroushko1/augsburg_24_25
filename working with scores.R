@@ -7,10 +7,11 @@ data_as_is <- read.csv('scores.csv')
 group1 <- c('Vandals', 'Ajax', 'Dunesday', 'Nighthawks', 'Brits')
 group2 <- c('Clann', 'Grumpys', 'Swamp Dragons', 'Tsunami', 'Du Nord')
 
-produce_table <- function(data, G){
-  left_join(
+produce_table <- function(data, G, session_n, season){
+  full_join(
     x = 
       data %>% 
+        filter(session %in% session_n & season == season) %>% 
         group_by(home) %>% 
         summarise(games_home = n(), 
                   wins_h = sum(ifelse(scorehome > scoreaway, 1, 0)),
@@ -28,6 +29,7 @@ produce_table <- function(data, G){
     , 
     y = 
       data %>% 
+        filter(session == session_n, season == season) %>% 
         group_by(away) %>% 
         summarise(games_away = n(), 
                   wins_a = sum(ifelse(scorehome < scoreaway, 1, 0)),
@@ -73,5 +75,14 @@ produce_table <- function(data, G){
     arrange(-total_pts, -diff)
 }
 
-produce_table(data = data_as_is, G = 'G1')
+produce_table(data = data_as_is, G = 'G1', session_n = 1, season = "2024/2025")
+produce_table(data = data_as_is, G = 'G2', session_n = 1, season = "2024/2025")
+
+produce_table(data = data_as_is, 
+              G = 'G1', 
+              session_n = 2, 
+              season = "2024/2025"
+              )
+produce_table(data = data_as_is, G = 'G2', session_n = 2, season = "2024/2025")
+
 
